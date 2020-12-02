@@ -1,12 +1,11 @@
 import React from "react"
-import Mission from "../components/Mission"
-import MissionInfo from "../components/MissionInfo"
+import './../styles/main.css'
+
 
 const Main = () => {
   return (
     <div className="main-container">
-      <Mission />
-      <MissionInfo />
+      <h1>Junaid</h1>
     </div>
   )
 }
