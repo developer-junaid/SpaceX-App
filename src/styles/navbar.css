@@ -1,0 +1,9 @@
+/* Navbar */
+.navbar-container {
+  min-height: 7vh;
+  z-index: 1;
+}
+
+.navbar-container .logo {
+  font-size: 2rem;
+}

@@ -1,0 +1,36 @@
+/* Landing Page */
+.landing-page-container {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("./../assets/images/spacex-lg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  flex-direction: column;
+  border: 2px solid black;
+  height: 100vh;
+}
+
+.landing-page-container .content {
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20rem;
+  text-align: center;
+  align-items: center;
+}
+
+.content h1 {
+  margin: 2rem;
+  color: white;
+  font-size: 3.5rem;
+}
+
+.content p {
+  color: white;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+/* // */
