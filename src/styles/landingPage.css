@@ -12,25 +12,30 @@
 }
 
 .landing-page-container .content {
-  height: 93vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20rem;
   text-align: center;
   align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(-8%);
+}
+
+.logo {
+  font-family: "Do Hyeon", sans-serif;  
 }
 
 .content h1 {
-  margin: 2rem;
   color: white;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
 }
 
 .content p {
   color: white;
   padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 /* // */
