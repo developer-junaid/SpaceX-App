@@ -5,5 +5,13 @@
 }
 
 .navbar-container .logo {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-family: "Do Hyeon", sans-serif;  
+
+}
+
+.logo img{
+  height: 3rem;
+  width: 3rem;
+  margin-right: 0.5rem;
 }

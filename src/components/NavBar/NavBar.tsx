@@ -1,6 +1,7 @@
 import React from "react";
 import "./../../styles/navbar.css";
 import { Nav, Navbar } from "react-bootstrap";
+import Rocket from './../../assets/images/rocket-512.png'
 
 const NavBar = () => {
   return (
@@ -12,6 +13,7 @@ const NavBar = () => {
       variant="dark"
     >
       <Navbar.Brand className="px-5 logo" href="#home">
+      <img src={Rocket} alt=""/>
         SpaceX
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
