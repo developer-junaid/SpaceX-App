@@ -1,14 +1,13 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
-import "./../../styles/landingPage.css";
+import "./landingPage.css";
 import { Button } from "react-bootstrap";
+import Header from "../Header/Header";
 
 export default function LandingPage() {
   return (
     <div className="landing-page-container">
-      <NavBar />
+      <Header />
       <div className="content">
-        
         <h1>SpaceX</h1>
         <p>
           SpaceX designs, manufactures and launches advanced rockets and
@@ -16,7 +15,9 @@ export default function LandingPage() {
           technology, with the ultimate goal of enabling people to live on other
           planets.
         </p>
-        <Button variant="success">Launches</Button>
+        <Button className="launches-btn" variant="success">
+          Launches
+        </Button>
       </div>
     </div>
   );

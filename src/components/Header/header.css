@@ -1,0 +1,18 @@
+/* Navbar */
+.header-container {
+  min-height: 10vh;
+  position: absolute;
+  z-index: 1;
+  background: transparent;
+}
+
+.header-container .logo {
+  font-size: 1.6rem;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.logo img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 0.5rem;
+}

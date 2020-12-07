@@ -1,19 +1,19 @@
 import React from "react";
-import "./../../styles/navbar.css";
+import "./header.css";
 import { Nav, Navbar } from "react-bootstrap";
-import Rocket from './../../assets/images/rocket-512.png'
+import Rocket from "./../../assets/images/rocket-512.png";
 
-const NavBar = () => {
+const Header = () => {
   return (
     <Navbar
       collapseOnSelect
-      className="navbar-container"
+      className="header-container"
       expand="md"
       bg="none"
       variant="dark"
     >
       <Navbar.Brand className="px-5 logo" href="#home">
-      <img src={Rocket} alt=""/>
+        <img src={Rocket} alt="" />
         SpaceX
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -30,4 +30,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;

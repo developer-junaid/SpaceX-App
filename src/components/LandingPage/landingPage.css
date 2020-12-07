@@ -1,0 +1,67 @@
+/* Landing Page */
+.landing-page-container {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("./../../assets/images/sky-lg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.landing-page-container .content {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(-8%);
+}
+
+.content h1 {
+  color: white;
+  font-size: 3.2rem;
+}
+
+.content p {
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.content .launches-btn {
+  position: relative;
+  display: block;
+  width: 10rem;
+  margin: 1.3rem 1rem;
+  padding: 0.8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  color: rgb(255, 254, 250);
+  background: transparent;
+  border: 2px #2c9b3e solid;
+  border-radius: 6px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+.content .launches-btn:hover {
+  background: #175e10f6;
+  border: 2px black solid;
+  color: #fff;
+}
+
+/* // */
