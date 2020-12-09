@@ -81,7 +81,7 @@
   letter-spacing: 1.2px;
   color: rgb(255, 254, 250);
   background: transparent;
-  border: 2px #2c9b3e solid;
+  border: 1px #2c9b3e solid;
   border-radius: 6px;
   text-transform: uppercase;
   outline: 0;
@@ -97,7 +97,7 @@
 
 .button:hover {
   background: #175e10f6;
-  border: 2px black solid;
+  border: 1px black solid;
   color: #fff;
 }
 
