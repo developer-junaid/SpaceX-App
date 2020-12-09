@@ -5,7 +5,7 @@ import ScrollableTabsButtonAuto from "./Tabs";
 const Missions = () => {
   return (
     <div className="missions-container">
-      <h1>Missions</h1>
+      <h1 className="heading">Missions</h1>
       <ScrollableTabsButtonAuto />
     </div>
   );

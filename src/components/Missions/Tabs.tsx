@@ -5,6 +5,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import "./missions.css";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     width: "100%",
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "black",
   },
 }));
 
@@ -70,17 +71,19 @@ export default function ScrollableTabsButtonAuto() {
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Tabs
+          className="tabs-container"
           value={value}
           onChange={handleChange}
+          centered
           indicatorColor="primary"
-          textColor="primary"
+          textColor="inherit"
           variant="scrollable"
           scrollButtons="auto"
-          aria-label="scrollable auto tabs example"
+          aria-label="missions"
         >
           {/* API DATA */}
           {dummyArray.map((label, index) => {
-            return <Tab label={label} {...a11yProps(index)} />;
+            return <Tab className="tab" label={label} {...a11yProps(index)} />;
           })}
           {/* // */}
 
@@ -95,24 +98,22 @@ export default function ScrollableTabsButtonAuto() {
       </AppBar>
 
       <TabPanel value={value} index={0}>
-        <h2 className="title">Name</h2>
+        <h2 className="title">Thaicom</h2>
+        <div className="underline"></div>
         <p className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi rem quo
-          omnis, quas, repudiandae error alias minus similique veniam qui
-          blanditiis sit. Officiis magni perferendis voluptatum rerum optio, quo
-          incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Debitis, asperiores. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Iusto tenetur mollitia provident, soluta saepe optio
-          sint autem aliquam. Eligendi, ipsam?
+          Thaicom is the name of a series of communications satellites operated
+          from Thailand, and also the name of Thaicom Public Company Limited,
+          which is the company that owns and operates the Thaicom satellite
+          fleet and other telecommunication businesses in Thailand and
+          throughout the Asia-Pacific region. The satellite projects were named
+          Thaicom by the King of Thailand, His Majesty the King Bhumibol
+          Adulyadej, as a symbol of the linkage between Thailand and modern
+          communications technology.
         </p>
-        <div className="status-year-container">
-          <div className="status">Success</div>
-          <div className="year">2019</div>
-        </div>
         <div className="social-media-container">
-          <div className="website">Website</div>
-          <div className="wikipedia">Wikipedia</div>
-          <div className="video">Video</div>
+          <button className="button website">Website</button>
+          <button className="button wikipedia">Wikipedia</button>
+          <button className="button twitter">Twitter</button>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
