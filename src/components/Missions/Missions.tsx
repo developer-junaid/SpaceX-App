@@ -1,10 +1,12 @@
 import React from "react";
 import "./missions.css";
+import ScrollableTabsButtonAuto from "./Tabs";
 
 const Missions = () => {
   return (
     <div className="missions-container">
-      <h1>Hellow, It's Missions!</h1>
+      <h1>Missions</h1>
+      <ScrollableTabsButtonAuto />
     </div>
   );
 };
