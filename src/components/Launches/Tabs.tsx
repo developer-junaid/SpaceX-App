@@ -86,18 +86,41 @@ export default function ScrollableTabsButtonAuto() {
             return <Tab className="tab" label={label} {...a11yProps(index)} />;
           })}
           {/* // */}
-
-          {/* <Tab label="Fakon" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
-          <Tab label="Item Four" {...a11yProps(3)} />
-          <Tab label="Item Five" {...a11yProps(4)} />
-          <Tab label="Item Six" {...a11yProps(5)} />
-          <Tab label="Item Seven" {...a11yProps(6)} /> */}
         </Tabs>
       </AppBar>
 
-      <TabPanel value={value} index={0}>
+      {/* Data From API */}
+      {dummyArray.map((label, index) => {
+        return (
+          <TabPanel value={value} index={index}>
+            <div className="content-container">
+              <h2 className="title">Thaicom 6&nbsp;(2014)</h2>
+              <div className="underline"></div>
+              <p className="description">
+                Thaicom is the name of a series of communications satellites
+                operated from Thailand, and also the name of Thaicom Public
+                Company Limited, which is the company that owns and operates the
+                Thaicom satellite fleet and other telecommunication businesses
+                in Thailand and throughout the Asia-Pacific region. The
+                satellite projects were named Thaicom by the King of Thailand,
+                His Majesty the King Bhumibol Adulyadej, as a symbol of the
+                linkage between Thailand and modern communications technology.
+              </p>
+              <div className="status">
+                Status: <span className="success">Successfull</span>
+              </div>
+              <div className="social-media-container">
+                <button className="button website">Article</button>
+                <button className="button wikipedia">Wikipedia</button>
+                <button className="button twitter">Video</button>
+              </div>
+            </div>
+          </TabPanel>
+        );
+      })}
+      {/* // */}
+
+      {/* <TabPanel value={value} index={0}>
         <div className="content-container">
           <h2 className="title">Thaicom 6&nbsp;(2014)</h2>
           <div className="underline"></div>
@@ -138,7 +161,7 @@ export default function ScrollableTabsButtonAuto() {
       </TabPanel>
       <TabPanel value={value} index={6}>
         Item Seven
-      </TabPanel>
+      </TabPanel> */}
     </div>
   );
 }
