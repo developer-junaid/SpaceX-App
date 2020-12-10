@@ -39,10 +39,14 @@
 }
 
 #scrollable-auto-tabpanel-0 {
-  height: 60vh !important;
+  min-height: 60vh !important;
   display: flex !important;
   flex-direction: column !important;
   padding: 2rem;
+}
+
+.content-container {
+  width: 100%;
 }
 
 /* Tab Content */

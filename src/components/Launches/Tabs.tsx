@@ -98,25 +98,27 @@ export default function ScrollableTabsButtonAuto() {
       </AppBar>
 
       <TabPanel value={value} index={0}>
-        <h2 className="title">Thaicom 6&nbsp;(2014)</h2>
-        <div className="underline"></div>
-        <p className="description">
-          Thaicom is the name of a series of communications satellites operated
-          from Thailand, and also the name of Thaicom Public Company Limited,
-          which is the company that owns and operates the Thaicom satellite
-          fleet and other telecommunication businesses in Thailand and
-          throughout the Asia-Pacific region. The satellite projects were named
-          Thaicom by the King of Thailand, His Majesty the King Bhumibol
-          Adulyadej, as a symbol of the linkage between Thailand and modern
-          communications technology.
-        </p>
-        <div className="status">
-          Status: <span className="success">Successfull</span>
-        </div>
-        <div className="social-media-container">
-          <button className="button website">Article</button>
-          <button className="button wikipedia">Wikipedia</button>
-          <button className="button twitter">Video</button>
+        <div className="content-container">
+          <h2 className="title">Thaicom 6&nbsp;(2014)</h2>
+          <div className="underline"></div>
+          <p className="description">
+            Thaicom is the name of a series of communications satellites
+            operated from Thailand, and also the name of Thaicom Public Company
+            Limited, which is the company that owns and operates the Thaicom
+            satellite fleet and other telecommunication businesses in Thailand
+            and throughout the Asia-Pacific region. The satellite projects were
+            named Thaicom by the King of Thailand, His Majesty the King Bhumibol
+            Adulyadej, as a symbol of the linkage between Thailand and modern
+            communications technology.
+          </p>
+          <div className="status">
+            Status: <span className="success">Successfull</span>
+          </div>
+          <div className="social-media-container">
+            <button className="button website">Article</button>
+            <button className="button wikipedia">Wikipedia</button>
+            <button className="button twitter">Video</button>
+          </div>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
