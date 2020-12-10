@@ -10,7 +10,7 @@
 }
 
 .heading {
-  color: white;
+  color: whitesmoke;
   margin: 3rem;
   text-align: center;
   padding: 1rem;
@@ -27,11 +27,11 @@
 }
 
 .tab {
-  color: white !important;
+  color: whitesmoke !important;
 }
 
 .MuiSvgIcon-root {
-  fill: white !important;
+  fill: whitesmoke !important;
 }
 
 .MuiTabs-indicator {
@@ -47,7 +47,7 @@
 
 /* Tab Content */
 .title {
-  color: white;
+  color: whitesmoke;
 }
 
 .underline {
@@ -58,9 +58,17 @@
 }
 
 .description {
-  color: white;
+  color: whitesmoke;
   padding: 2rem 0;
   font-size: 1.3rem;
+}
+
+.status {
+  color: whitesmoke;
+}
+
+.success {
+  color: green;
 }
 
 .social-media-container {
@@ -79,7 +87,7 @@
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 1.2px;
-  color: rgb(255, 254, 250);
+  color: whitesmoke;
   background: transparent;
   border: 1px #2c9b3e solid;
   border-radius: 6px;
@@ -98,7 +106,7 @@
 .button:hover {
   background: #175e10f6;
   border: 1px black solid;
-  color: #fff;
+  color: whitesmoke;
 }
 
 /* // Tab Content*/

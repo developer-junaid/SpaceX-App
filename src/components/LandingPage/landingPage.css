@@ -23,12 +23,12 @@
 }
 
 .content h1 {
-  color: white;
+  color: whitesmoke;
   font-size: 3.2rem;
 }
 
 .content p {
-  color: white;
+  color: whitesmoke;
   padding: 1rem;
   font-size: 1.2rem;
 }
@@ -42,7 +42,7 @@
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 1.2px;
-  color: rgb(255, 254, 250);
+  color: whitesmoke;
   background: transparent;
   border: 2px #2c9b3e solid;
   border-radius: 6px;
@@ -61,7 +61,7 @@
 .content .launches-btn:hover {
   background: #175e10f6;
   border: 2px black solid;
-  color: #fff;
+  color: whitesmoke;
 }
 
 /* // */

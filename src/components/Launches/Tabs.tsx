@@ -5,7 +5,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import "./missions.css";
+import "./launches.css";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -58,7 +58,7 @@ export default function ScrollableTabsButtonAuto() {
 
   // Dummy State
   const [dummyArray, setDummyArray] = useState([
-    "Fakon",
+    "Thaicom 6",
     "Item Two",
     "Item Three",
     "Item Four",
@@ -98,7 +98,7 @@ export default function ScrollableTabsButtonAuto() {
       </AppBar>
 
       <TabPanel value={value} index={0}>
-        <h2 className="title">Thaicom</h2>
+        <h2 className="title">Thaicom 6&nbsp;(2014)</h2>
         <div className="underline"></div>
         <p className="description">
           Thaicom is the name of a series of communications satellites operated
@@ -110,10 +110,13 @@ export default function ScrollableTabsButtonAuto() {
           Adulyadej, as a symbol of the linkage between Thailand and modern
           communications technology.
         </p>
+        <div className="status">
+          Status: <span className="success">Successfull</span>
+        </div>
         <div className="social-media-container">
-          <button className="button website">Website</button>
+          <button className="button website">Article</button>
           <button className="button wikipedia">Wikipedia</button>
-          <button className="button twitter">Twitter</button>
+          <button className="button twitter">Video</button>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

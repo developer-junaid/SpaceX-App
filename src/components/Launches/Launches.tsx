@@ -1,14 +1,14 @@
 import React from "react";
-import "./missions.css";
+import "./launches.css";
 import ScrollableTabsButtonAuto from "./Tabs";
 
-const Missions = () => {
+const Launches = () => {
   return (
     <div className="missions-container">
-      <h1 className="heading">Missions</h1>
+      <h1 className="heading">Launches</h1>
       <ScrollableTabsButtonAuto />
     </div>
   );
 };
 
-export default Missions;
+export default Launches;

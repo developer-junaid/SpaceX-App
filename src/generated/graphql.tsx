@@ -733,119 +733,50 @@ export enum CacheControlScope {
 }
 
 
-export type LaunchesInfoQueryVariables = Exact<{ [key: string]: never; }>;
+export type MissionsInfoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type LaunchesInfoQuery = (
+export type MissionsInfoQuery = (
   { __typename?: 'Query' }
-  & { launches?: Maybe<Array<Maybe<(
-    { __typename?: 'Launch' }
-    & Pick<Launch, 'launch_success' | 'launch_year' | 'mission_id' | 'mission_name'>
+  & { missions?: Maybe<Array<Maybe<(
+    { __typename?: 'Mission' }
+    & Pick<Mission, 'description' | 'website' | 'wikipedia' | 'twitter'>
   )>>> }
 );
 
-export type LaunchInfoQueryVariables = Exact<{
-  id: Scalars['String'];
-}>;
 
-
-export type LaunchInfoQuery = (
-  { __typename?: 'Query' }
-  & { launch?: Maybe<(
-    { __typename?: 'Launch' }
-    & Pick<Launch, 'mission_name' | 'launch_year' | 'launch_success' | 'details'>
-    & { launch_site?: Maybe<(
-      { __typename?: 'LaunchSite' }
-      & Pick<LaunchSite, 'site_name'>
-    )>, rocket?: Maybe<(
-      { __typename?: 'LaunchRocket' }
-      & Pick<LaunchRocket, 'rocket_name' | 'rocket_type'>
-    )>, links?: Maybe<(
-      { __typename?: 'LaunchLinks' }
-      & Pick<LaunchLinks, 'flickr_images'>
-    )> }
-  )> }
-);
-
-
-export const LaunchesInfoDocument = gql`
-    query LaunchesInfo {
-  launches {
-    launch_success
-    launch_year
-    mission_id
-    mission_name
+export const MissionsInfoDocument = gql`
+    query MissionsInfo {
+  missions {
+    description
+    website
+    wikipedia
+    twitter
   }
 }
     `;
 
 /**
- * __useLaunchesInfoQuery__
+ * __useMissionsInfoQuery__
  *
- * To run a query within a React component, call `useLaunchesInfoQuery` and pass it any options that fit your needs.
- * When your component renders, `useLaunchesInfoQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useMissionsInfoQuery` and pass it any options that fit your needs.
+ * When your component renders, `useMissionsInfoQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useLaunchesInfoQuery({
+ * const { data, loading, error } = useMissionsInfoQuery({
  *   variables: {
  *   },
  * });
  */
-export function useLaunchesInfoQuery(baseOptions?: Apollo.QueryHookOptions<LaunchesInfoQuery, LaunchesInfoQueryVariables>) {
-        return Apollo.useQuery<LaunchesInfoQuery, LaunchesInfoQueryVariables>(LaunchesInfoDocument, baseOptions);
+export function useMissionsInfoQuery(baseOptions?: Apollo.QueryHookOptions<MissionsInfoQuery, MissionsInfoQueryVariables>) {
+        return Apollo.useQuery<MissionsInfoQuery, MissionsInfoQueryVariables>(MissionsInfoDocument, baseOptions);
       }
-export function useLaunchesInfoLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<LaunchesInfoQuery, LaunchesInfoQueryVariables>) {
-          return Apollo.useLazyQuery<LaunchesInfoQuery, LaunchesInfoQueryVariables>(LaunchesInfoDocument, baseOptions);
+export function useMissionsInfoLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MissionsInfoQuery, MissionsInfoQueryVariables>) {
+          return Apollo.useLazyQuery<MissionsInfoQuery, MissionsInfoQueryVariables>(MissionsInfoDocument, baseOptions);
         }
-export type LaunchesInfoQueryHookResult = ReturnType<typeof useLaunchesInfoQuery>;
-export type LaunchesInfoLazyQueryHookResult = ReturnType<typeof useLaunchesInfoLazyQuery>;
-export type LaunchesInfoQueryResult = Apollo.QueryResult<LaunchesInfoQuery, LaunchesInfoQueryVariables>;
-export const LaunchInfoDocument = gql`
-    query LaunchInfo($id: String!) {
-  launch(id: $id) {
-    mission_name
-    launch_year
-    launch_success
-    details
-    launch_site {
-      site_name
-    }
-    rocket {
-      rocket_name
-      rocket_type
-    }
-    links {
-      flickr_images
-    }
-  }
-}
-    `;
-
-/**
- * __useLaunchInfoQuery__
- *
- * To run a query within a React component, call `useLaunchInfoQuery` and pass it any options that fit your needs.
- * When your component renders, `useLaunchInfoQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useLaunchInfoQuery({
- *   variables: {
- *      id: // value for 'id'
- *   },
- * });
- */
-export function useLaunchInfoQuery(baseOptions: Apollo.QueryHookOptions<LaunchInfoQuery, LaunchInfoQueryVariables>) {
-        return Apollo.useQuery<LaunchInfoQuery, LaunchInfoQueryVariables>(LaunchInfoDocument, baseOptions);
-      }
-export function useLaunchInfoLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<LaunchInfoQuery, LaunchInfoQueryVariables>) {
-          return Apollo.useLazyQuery<LaunchInfoQuery, LaunchInfoQueryVariables>(LaunchInfoDocument, baseOptions);
-        }
-export type LaunchInfoQueryHookResult = ReturnType<typeof useLaunchInfoQuery>;
-export type LaunchInfoLazyQueryHookResult = ReturnType<typeof useLaunchInfoLazyQuery>;
-export type LaunchInfoQueryResult = Apollo.QueryResult<LaunchInfoQuery, LaunchInfoQueryVariables>;
+export type MissionsInfoQueryHookResult = ReturnType<typeof useMissionsInfoQuery>;
+export type MissionsInfoLazyQueryHookResult = ReturnType<typeof useMissionsInfoLazyQuery>;
+export type MissionsInfoQueryResult = Apollo.QueryResult<MissionsInfoQuery, MissionsInfoQueryVariables>;

@@ -1,13 +1,13 @@
 import React from "react";
 import LandingPage from "../components/LandingPage/LandingPage";
-import Missions from "../components/Missions/Missions";
+import Launches from "../components/Launches/Launches";
 import "./main.css";
 
 const Main = () => {
   return (
     <>
       <LandingPage />
-      <Missions />
+      <Launches />
     </>
   );
 };
