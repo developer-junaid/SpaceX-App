@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import "./launches.css";
 import { AppBar, Tabs, Tab } from "@material-ui/core";
+import { useLaunchesQuery } from "./../../generated/graphql";
 
 // Tab Panel for Tabs Data
 const TabPanel = (props: any) => {
   const { children, value, index } = props;
 
   return (
-    <div>
+    <>
       {value === index && <div className="content-container">{children}</div>}
-    </div>
+    </>
   );
 };
 
 // // Tab Panel
 
 const Launches = () => {
+  // Get API Data
+  const { data, error, loading } = useLaunchesQuery();
+
   // State for Tab Value
   const [value, setValue] = useState(0);
 
@@ -24,6 +28,13 @@ const Launches = () => {
     setValue(val);
   };
 
+  // If There is any error
+  if (error || !data) return <h4>Sorry, an error has occured :(</h4>;
+
+  // If Data loading
+  if (loading) return <h4>Loading</h4>;
+
+  // If All good
   return (
     <div className="launches-container">
       <h1 className="heading">Launches</h1>
@@ -38,58 +49,49 @@ const Launches = () => {
           aria-label="launches"
           onChange={handleTabs}
         >
-          <Tab className="tab" label="Item One" />
-          <Tab className="tab" label="Item Two" />
-          <Tab className="tab" label="Item Three" />
-          <Tab className="tab" label="Item Four" />
-          <Tab className="tab" label="Item Five" />
-          <Tab className="tab" label="Item Six" />
-          <Tab className="tab" label="Item Seven" />
+          {data.launches?.map((launch, index) => {
+            return (
+              <Tab key={index} className="tab" label={launch?.mission_name} />
+            );
+          })}
         </Tabs>
       </AppBar>
       {/* // Tabs */}
       {/* Tab Panels */}
-      <TabPanel value={value} index={0}>
-        <h2 className="title">Thaicom 6&nbsp;(2014)</h2>
-        <div className="underline"></div>
-        <p className="description">
-          Thaicom is the name of a series of communications satellites operated
-          from Thailand, and also the name of Thaicom Public Company Limited,
-          which is the company that owns and operates the Thaicom satellite
-          fleet and other telecommunication businesses in Thailand and
-          throughout the Asia-Pacific region. The satellite projects were named
-          Thaicom by the King of Thailand, His Majesty the King Bhumibol
-          Adulyadej, as a symbol of the linkage between Thailand and modern
-          communications technology.
-        </p>
-        <div className="status">
-          Status: <span className="success">Successfull</span>
-        </div>
-        <div className="social-media-container">
-          <button className="button website">Article</button>
-          <button className="button wikipedia">Wikipedia</button>
-          <button className="button twitter">Video</button>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two Details
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three Details
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        Item Four Details
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item Five Details
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Six Details
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven Details
-      </TabPanel>
-      {/* // Tab Panels */}
+
+      {data.launches?.map((launch, index) => {
+        // Variables
+        let articleLink = launch?.links?.article_link;
+        let wikiLink = launch?.links?.wikipedia;
+        let videoLink = launch?.links?.video_link;
+
+        return (
+          <TabPanel key={index} value={value} index={index}>
+            <h2 className="title">
+              {launch?.mission_name}&nbsp;({launch?.launch_year})
+            </h2>
+            <div className="underline"></div>
+            <p className="description">{launch?.details}</p>
+            <div className="status">
+              Status:{" "}
+              <span className={launch?.launch_success ? "success" : "failure"}>
+                {launch?.launch_success ? "Success" : "Failure"}
+              </span>
+            </div>
+            <div className="social-media-container">
+              <a target="_blank" href={`${articleLink}`}>
+                <button className="button website">Article</button>
+              </a>
+              <a target="_blank" href={`${wikiLink}`}>
+                <button className="button wikipedia">Wikipedia</button>
+              </a>
+              <a target="_blank" href={`${videoLink}`}>
+                <button className="button twitter">Video</button>
+              </a>
+            </div>
+          </TabPanel>
+        );
+      })}
     </div>
   );
 };

@@ -733,50 +733,60 @@ export enum CacheControlScope {
 }
 
 
-export type MissionsInfoQueryVariables = Exact<{ [key: string]: never; }>;
+export type LaunchesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type MissionsInfoQuery = (
+export type LaunchesQuery = (
   { __typename?: 'Query' }
-  & { missions?: Maybe<Array<Maybe<(
-    { __typename?: 'Mission' }
-    & Pick<Mission, 'description' | 'website' | 'wikipedia' | 'twitter'>
+  & { launches?: Maybe<Array<Maybe<(
+    { __typename?: 'Launch' }
+    & Pick<Launch, 'mission_id' | 'mission_name' | 'launch_success' | 'launch_year' | 'details'>
+    & { links?: Maybe<(
+      { __typename?: 'LaunchLinks' }
+      & Pick<LaunchLinks, 'article_link' | 'wikipedia' | 'video_link'>
+    )> }
   )>>> }
 );
 
 
-export const MissionsInfoDocument = gql`
-    query MissionsInfo {
-  missions {
-    description
-    website
-    wikipedia
-    twitter
+export const LaunchesDocument = gql`
+    query Launches {
+  launches(limit: 40) {
+    mission_id
+    mission_name
+    launch_success
+    launch_year
+    details
+    links {
+      article_link
+      wikipedia
+      video_link
+    }
   }
 }
     `;
 
 /**
- * __useMissionsInfoQuery__
+ * __useLaunchesQuery__
  *
- * To run a query within a React component, call `useMissionsInfoQuery` and pass it any options that fit your needs.
- * When your component renders, `useMissionsInfoQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useLaunchesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useLaunchesQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useMissionsInfoQuery({
+ * const { data, loading, error } = useLaunchesQuery({
  *   variables: {
  *   },
  * });
  */
-export function useMissionsInfoQuery(baseOptions?: Apollo.QueryHookOptions<MissionsInfoQuery, MissionsInfoQueryVariables>) {
-        return Apollo.useQuery<MissionsInfoQuery, MissionsInfoQueryVariables>(MissionsInfoDocument, baseOptions);
+export function useLaunchesQuery(baseOptions?: Apollo.QueryHookOptions<LaunchesQuery, LaunchesQueryVariables>) {
+        return Apollo.useQuery<LaunchesQuery, LaunchesQueryVariables>(LaunchesDocument, baseOptions);
       }
-export function useMissionsInfoLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<MissionsInfoQuery, MissionsInfoQueryVariables>) {
-          return Apollo.useLazyQuery<MissionsInfoQuery, MissionsInfoQueryVariables>(MissionsInfoDocument, baseOptions);
+export function useLaunchesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<LaunchesQuery, LaunchesQueryVariables>) {
+          return Apollo.useLazyQuery<LaunchesQuery, LaunchesQueryVariables>(LaunchesDocument, baseOptions);
         }
-export type MissionsInfoQueryHookResult = ReturnType<typeof useMissionsInfoQuery>;
-export type MissionsInfoLazyQueryHookResult = ReturnType<typeof useMissionsInfoLazyQuery>;
-export type MissionsInfoQueryResult = Apollo.QueryResult<MissionsInfoQuery, MissionsInfoQueryVariables>;
+export type LaunchesQueryHookResult = ReturnType<typeof useLaunchesQuery>;
+export type LaunchesLazyQueryHookResult = ReturnType<typeof useLaunchesLazyQuery>;
+export type LaunchesQueryResult = Apollo.QueryResult<LaunchesQuery, LaunchesQueryVariables>;

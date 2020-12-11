@@ -77,6 +77,10 @@
   color: green;
 }
 
+.failure {
+  color: red;
+}
+
 .social-media-container {
   padding: 2rem;
   display: flex;
