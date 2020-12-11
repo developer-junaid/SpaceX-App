@@ -1,4 +1,4 @@
-.missions-container {
+.launches-container {
   min-height: 70vh;
   width: 100%;
   padding: 4rem;
@@ -37,16 +37,18 @@
 .MuiTabs-indicator {
   background-color: green !important;
 }
-
+/* 
 #scrollable-auto-tabpanel-0 {
+ 
+} */
+
+.content-container {
+  width: 100%;
   min-height: 60vh !important;
   display: flex !important;
   flex-direction: column !important;
   padding: 2rem;
-}
-
-.content-container {
-  width: 100%;
+  background-color: black;
 }
 
 /* Tab Content */
