@@ -2,6 +2,7 @@ import React from "react";
 import "./header.css";
 import { Nav, Navbar } from "react-bootstrap";
 import Rocket from "./../../assets/images/rocket-512.png";
+import { animateScroll as scroll, Link } from "react-scroll";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
       bg="none"
       variant="dark"
     >
-      <Navbar.Brand className="px-5 logo" href="#home">
+      <Navbar.Brand className="px-5 logo" onClick={() => scroll.scrollToTop()}>
         <img src={Rocket} alt="" />
         SpaceX
       </Navbar.Brand>
@@ -22,8 +23,30 @@ const Header = () => {
         id="responsive-navbar-nav"
       >
         <Nav>
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#launches">Launches</Nav.Link>
+          <Link
+            activeClass="active"
+            className="anchor"
+            to="home-section"
+            spy={true}
+            smooth={true}
+            delay={100}
+            offset={-200}
+            duration={500}
+          >
+            Home
+          </Link>
+          <Link
+            activeClass="active"
+            className="anchor"
+            to="launches-section"
+            spy={true}
+            smooth={true}
+            delay={100}
+            offset={-200}
+            duration={500}
+          >
+            Launches
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

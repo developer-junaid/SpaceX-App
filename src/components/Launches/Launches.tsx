@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./launches.css";
 import { AppBar, Tabs, Tab } from "@material-ui/core";
 import { useLaunchesQuery } from "./../../generated/graphql";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 // Tab Panel for Tabs Data
 const TabPanel = (props: any) => {
@@ -28,15 +29,21 @@ const Launches = () => {
     setValue(val);
   };
 
-  // If There is any error
-  if (error || !data) return <h4>Sorry, an error has occured :(</h4>;
-
   // If Data loading
-  if (loading) return <h4>Loading</h4>;
+  if (loading || !data)
+    return (
+      <div id="launches-section" className="loader-container">
+        <CircularProgress className="loader" color="secondary" />
+      </div>
+    );
+
+  // If There is any error
+  if (error) return <h4>Sorry, an error has occured :(</h4>;
 
   // If All good
+
   return (
-    <div className="launches-container">
+    <div className="launches-container" id="launches-section">
       <h1 className="heading">Launches</h1>
 
       {/* Tabs */}
@@ -79,13 +86,13 @@ const Launches = () => {
               </span>
             </div>
             <div className="social-media-container">
-              <a target="_blank" href={`${articleLink}`}>
+              <a target="_blank" rel="noreferrer" href={`${articleLink}`}>
                 <button className="button website">Article</button>
               </a>
-              <a target="_blank" href={`${wikiLink}`}>
+              <a target="_blank" rel="noreferrer" href={`${wikiLink}`}>
                 <button className="button wikipedia">Wikipedia</button>
               </a>
-              <a target="_blank" href={`${videoLink}`}>
+              <a target="_blank" rel="noreferrer" href={`${videoLink}`}>
                 <button className="button twitter">Video</button>
               </a>
             </div>

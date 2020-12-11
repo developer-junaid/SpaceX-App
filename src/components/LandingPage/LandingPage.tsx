@@ -7,7 +7,7 @@ export default function LandingPage() {
   return (
     <div className="landing-page-container">
       <Header />
-      <div className="content">
+      <div className="content" id="home-section">
         <h1>SpaceX</h1>
         <p>
           SpaceX designs, manufactures and launches advanced rockets and
@@ -15,9 +15,12 @@ export default function LandingPage() {
           technology, with the ultimate goal of enabling people to live on other
           planets.
         </p>
-        <Button className="launches-btn" variant="success">
-          Launches
-        </Button>
+
+        <a href="#launches-section">
+          <Button className="launches-btn" variant="success">
+            Launches
+          </Button>
+        </a>
       </div>
     </div>
   );

@@ -1,13 +1,27 @@
 /* Navbar */
 .header-container {
-  min-height: 10vh;
-  position: absolute;
-  z-index: 1;
-  background: transparent;
+  position: fixed !important;
+  top: 0;
+  z-index: 111;
+  display: flex;
+  background: black;
+  flex-direction: row;
+  padding: 1.2rem;
+  align-items: center;
+  box-shadow: 2px 2px 4px green;
+  justify-content: space-between;
+  width: 100%;
+  height: 7vh;
+}
+
+.navbar-collapse {
+  background-color: black !important;
+  width: 100vw !important;
 }
 
 .header-container .logo {
   font-size: 1.6rem;
+  cursor: pointer;
   font-family: "Do Hyeon", sans-serif;
 }
 
@@ -15,4 +29,14 @@
   height: 3rem;
   width: 3rem;
   margin-right: 0.5rem;
+}
+
+.anchor {
+  margin: 1rem;
+  color: rgba(224, 210, 210, 0.87) !important;
+  cursor: pointer;
+}
+
+.active {
+  color: white !important;
 }
