@@ -15,6 +15,7 @@
 
 .developer-info {
   font-size: 1rem;
+  color: rgba(241, 250, 241, 0.719);
 }
 
 .icons-container {
@@ -33,7 +34,7 @@
 .icon {
   font-size: 1.2rem;
   cursor: pointer;
-  margin: 0 0.5rem;
+  margin: 0 0.8rem;
 }
 
 .icon:hover {

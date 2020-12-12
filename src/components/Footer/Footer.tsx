@@ -4,18 +4,24 @@ import "./footer.css";
 export default function Footer() {
   return (
     <div className="footer-container">
-      <h5 className="developer-info">Developer: Junaid Qureshi</h5>
+      <span className="developer-info">Developer: Junaid Qureshi</span>
       <div className="icons-container">
-        <a rel="noreferrer" href="https://github.com/developer-junaid">
+        <a
+          title="github"
+          rel="noreferrer"
+          href="https://github.com/developer-junaid"
+        >
           <i className="fab fa-github icon"></i>
         </a>
         <a
+          title="github"
           rel="noreferrer"
           href="https://www.linkedin.com/in/developer-junaid/"
         >
           <i className="fab fa-linkedin-in icon"></i>
         </a>
         <a
+          title="github"
           rel="noreferrer"
           href="https://www.facebook.com/profile.php?id=100041078220896"
         >
