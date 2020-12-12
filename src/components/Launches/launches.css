@@ -16,7 +16,7 @@
   padding: 1rem;
   width: 30%;
   border-bottom: 1px solid green;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .tabs-container {
@@ -55,13 +55,13 @@
 /* Tab Content */
 .title {
   color: whitesmoke;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .description {
   color: whitesmoke;
   padding: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .underline {
@@ -73,7 +73,7 @@
 
 .status {
   color: whitesmoke;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .success {
@@ -87,7 +87,7 @@
 .social-media-container {
   padding: 2rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -98,11 +98,11 @@
 
 .button {
   position: relative;
-  width: 90%;
+  width: 20vw;
   margin: 1rem;
   padding: 0.8rem;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 1.2px;
   color: whitesmoke;
   background: transparent;
@@ -136,3 +136,84 @@
 }
 
 /* // Tab Content*/
+
+@media screen and (max-width: 770px) {
+  .social-media-container {
+    padding: 0rem;
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .heading {
+    color: whitesmoke;
+    margin: 3rem;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid green;
+    font-size: 1.6rem;
+  }
+
+  .title {
+    color: whitesmoke;
+    font-size: 1.3rem;
+  }
+
+  .description {
+    color: whitesmoke;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+  }
+  .status {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    width: 80vw;
+    font-size: 0.7rem;
+  }
+
+  .launches-container {
+    min-height: 100vh;
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .social-media-container {
+    padding: 0rem;
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .heading {
+    color: whitesmoke;
+    margin: 3rem;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid green;
+    font-size: 2rem;
+  }
+
+  .title {
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+
+  .description {
+    color: whitesmoke;
+    padding: 2rem 0;
+    font-size: 1rem;
+  }
+
+  .button {
+    width: 80vw;
+    font-size: 0.7rem;
+  }
+
+  .launches-container {
+    min-height: 100vh;
+    padding: 0rem;
+  }
+}

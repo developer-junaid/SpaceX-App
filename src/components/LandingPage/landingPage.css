@@ -23,13 +23,15 @@
 
 .content h1 {
   color: whitesmoke;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
 }
 
 .content p {
   color: whitesmoke;
   padding: 1rem;
-  font-size: 1.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
 }
 
 .content .launches-btn {
@@ -39,7 +41,8 @@
   margin: 1.3rem 1rem;
   padding: 0.8rem;
   font-weight: 700;
-  font-size: 1rem;
+  text-decoration: none !important;
+  font-size: 0.9rem;
   letter-spacing: 1.2px;
   color: whitesmoke;
   background: transparent;
@@ -63,3 +66,37 @@
 }
 
 /* // */
+
+@media screen and (max-width: 770px) {
+  .content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .landing-page-container .content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .content p {
+    padding: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    letter-spacing: 0rem;
+  }
+
+  .content .launches-btn {
+    width: 40vw;
+    text-align: center;
+    margin: 1rem 1rem;
+    padding: 0.7rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 1.1px;
+  }
+}

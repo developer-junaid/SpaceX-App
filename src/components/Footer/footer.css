@@ -13,6 +13,10 @@
   height: 7vh;
 }
 
+.developer-info {
+  font-size: 1rem;
+}
+
 .icons-container {
   width: 10rem;
   height: 80%;
@@ -27,11 +31,37 @@
 }
 
 .icon {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   margin: 0 0.5rem;
 }
 
 .icon:hover {
   color: whitesmoke;
+}
+
+@media screen and (max-width: 770px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+
+  .icons-container {
+    margin-top: 0.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .developer-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
 }
