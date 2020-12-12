@@ -1,15 +1,20 @@
 import React from "react";
 import "./landingPage.css";
-import { Button } from "react-bootstrap";
 import Header from "../Header/Header";
-import { animateScroll as scroll, Link } from "react-scroll";
-
+import { Link } from "react-scroll";
+import Typical from "react-typical";
 export default function LandingPage() {
   return (
     <div className="landing-page-container">
       <Header />
       <div className="content" id="home-section">
-        <h1>SpaceX</h1>
+        <h1>
+          <Typical
+            loop={Infinity}
+            wrapper="b"
+            steps={["SpaceX", 1500, "Launches", 1500]}
+          />
+        </h1>
         <p>
           SpaceX designs, manufactures and launches advanced rockets and
           spacecraft. The company was founded in 2002 to revolutionize space
