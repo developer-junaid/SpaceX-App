@@ -16,6 +16,7 @@
   padding: 1rem;
   width: 30%;
   border-bottom: 1px solid green;
+  font-size: 3rem;
 }
 
 .tabs-container {
@@ -54,6 +55,13 @@
 /* Tab Content */
 .title {
   color: whitesmoke;
+  font-size: 2rem;
+}
+
+.description {
+  color: whitesmoke;
+  padding: 2rem 0;
+  font-size: 1.2rem;
 }
 
 .underline {
@@ -63,14 +71,9 @@
   margin: 1rem 0;
 }
 
-.description {
-  color: whitesmoke;
-  padding: 2rem 0;
-  font-size: 1.3rem;
-}
-
 .status {
   color: whitesmoke;
+  font-size: 1.2rem;
 }
 
 .success {
@@ -86,13 +89,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
+}
+
+.none {
+  display: none !important;
 }
 
 .button {
   position: relative;
-  display: block;
-  width: 10rem;
-  margin: 1.3rem 1rem;
+  width: 90%;
+  margin: 1rem;
   padding: 0.8rem;
   font-weight: 700;
   font-size: 1rem;

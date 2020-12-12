@@ -57,9 +57,15 @@ const Launches = () => {
           onChange={handleTabs}
         >
           {data.launches?.map((launch, index) => {
-            return (
-              <Tab key={index} className="tab" label={launch?.mission_name} />
-            );
+            // If All Data is there
+            if (launch?.details) {
+              return (
+                <Tab key={index} className="tab" label={launch?.mission_name} />
+              );
+            } else {
+              return <Tab key={index} className="none" label={""} />;
+            }
+            //
           })}
         </Tabs>
       </AppBar>
@@ -72,32 +78,48 @@ const Launches = () => {
         let wikiLink = launch?.links?.wikipedia;
         let videoLink = launch?.links?.video_link;
 
-        return (
-          <TabPanel key={index} value={value} index={index}>
-            <h2 className="title">
-              {launch?.mission_name}&nbsp;({launch?.launch_year})
-            </h2>
-            <div className="underline"></div>
-            <p className="description">{launch?.details}</p>
-            <div className="status">
-              Status:{" "}
-              <span className={launch?.launch_success ? "success" : "failure"}>
-                {launch?.launch_success ? "Success" : "Failure"}
-              </span>
-            </div>
-            <div className="social-media-container">
-              <a target="_blank" rel="noreferrer" href={`${articleLink}`}>
-                <button className="button website">Article</button>
-              </a>
-              <a target="_blank" rel="noreferrer" href={`${wikiLink}`}>
-                <button className="button wikipedia">Wikipedia</button>
-              </a>
-              <a target="_blank" rel="noreferrer" href={`${videoLink}`}>
-                <button className="button twitter">Video</button>
-              </a>
-            </div>
-          </TabPanel>
-        );
+        // If All Data is there
+        if (launch?.details) {
+          return (
+            <TabPanel key={index} value={value} index={index}>
+              <h2 className="title">
+                {launch?.mission_name}&nbsp;({launch?.launch_year})
+              </h2>
+              <div className="underline"></div>
+              <p className="description">{launch?.details}</p>
+              <div className="status">
+                Status:{" "}
+                <span
+                  className={launch?.launch_success ? "success" : "failure"}
+                >
+                  {launch?.launch_success ? "Success" : "Failure"}
+                </span>
+              </div>
+              <div className="social-media-container">
+                <a target="_blank" rel="noreferrer" href={`${articleLink}`}>
+                  <button className="button website">Article</button>
+                </a>
+                <a target="_blank" rel="noreferrer" href={`${wikiLink}`}>
+                  <button className="button wikipedia">Wikipedia</button>
+                </a>
+                <a target="_blank" rel="noreferrer" href={`${videoLink}`}>
+                  <button className="button twitter">Video</button>
+                </a>
+              </div>
+            </TabPanel>
+          );
+        } else {
+          return (
+            <TabPanel
+              key={index}
+              className="none"
+              value={value}
+              index={index}
+            ></TabPanel>
+          );
+        }
+
+        //
       })}
     </div>
   );
