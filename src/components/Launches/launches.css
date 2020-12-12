@@ -1,0 +1,219 @@
+.launches-container {
+  min-height: 70vh;
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000000fa;
+}
+
+.heading {
+  color: whitesmoke;
+  margin: 3rem;
+  text-align: center;
+  padding: 1rem;
+  width: 30%;
+  border-bottom: 1px solid green;
+  font-size: 2rem;
+}
+
+.tabs-container {
+  background: rgb(0, 0, 0);
+  display: flex !important;
+  justify-content: center !important;
+  border-width: 10px;
+  align-items: center !important;
+}
+
+.tab {
+  color: whitesmoke !important;
+}
+
+.MuiSvgIcon-root {
+  fill: whitesmoke !important;
+}
+
+.MuiTabs-indicator {
+  background-color: green !important;
+}
+/* 
+#scrollable-auto-tabpanel-0 {
+ 
+} */
+
+.content-container {
+  width: 100%;
+  min-height: 60vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 2rem;
+  background-color: black;
+}
+
+/* Tab Content */
+.title {
+  color: whitesmoke;
+  font-size: 1.6rem;
+}
+
+.description {
+  color: whitesmoke;
+  padding: 2rem 0;
+  font-size: 1.1rem;
+}
+
+.underline {
+  background-color: green;
+  width: 4rem;
+  height: 1px;
+  margin: 1rem 0;
+}
+
+.status {
+  color: whitesmoke;
+  font-size: 1.1rem;
+}
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
+
+.social-media-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.none {
+  display: none !important;
+}
+
+.button {
+  position: relative;
+  width: 20vw;
+  margin: 1rem;
+  padding: 0.8rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1.2px;
+  color: whitesmoke;
+  background: transparent;
+  border: 1px #2c9b3e solid;
+  border-radius: 6px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover {
+  background: #175e10f6;
+  border: 1px black solid;
+  color: whitesmoke;
+}
+
+.loader-container {
+  position: relative;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* // Tab Content*/
+
+@media screen and (max-width: 770px) {
+  .social-media-container {
+    padding: 0rem;
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .heading {
+    color: whitesmoke;
+    margin: 3rem;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid green;
+    font-size: 1.6rem;
+  }
+
+  .title {
+    color: whitesmoke;
+    font-size: 1.3rem;
+  }
+
+  .description {
+    color: whitesmoke;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+  }
+  .status {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    width: 80vw;
+    font-size: 0.7rem;
+  }
+
+  .launches-container {
+    min-height: 100vh;
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .social-media-container {
+    padding: 0rem;
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .heading {
+    color: whitesmoke;
+    margin: 3rem;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid green;
+    font-size: 2rem;
+  }
+
+  .title {
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+
+  .description {
+    color: whitesmoke;
+    padding: 2rem 0;
+    font-size: 1rem;
+  }
+
+  .button {
+    width: 80vw;
+    font-size: 0.7rem;
+  }
+
+  .launches-container {
+    min-height: 100vh;
+    padding: 0rem;
+  }
+}

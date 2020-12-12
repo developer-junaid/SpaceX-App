@@ -1,15 +1,15 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import "./index.css"
-import App from "./components/App/App"
-import { client } from "./config/graphql_config"
-import { ApolloProvider } from "@apollo/client"
+import React from "react";
+import ReactDOM from "react-dom";
+import { client } from "./config/graphql_config";
+import { ApolloProvider } from "@apollo/client";
+import Main from "./container/Main";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <App />
+      <Main />
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById("root")
-)
+);
