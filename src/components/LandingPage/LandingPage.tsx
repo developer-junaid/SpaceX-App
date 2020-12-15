@@ -12,7 +12,7 @@ export default function LandingPage() {
           <Typical
             loop={Infinity}
             wrapper="b"
-            steps={["Welcome to SpaceX", 1200, "SpaceX Lauches", 1200]}
+            steps={["Welcome to SpaceX", 1200, "SpaceX Launches", 1200]}
           />
         </h1>
         <p>
