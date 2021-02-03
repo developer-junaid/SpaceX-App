@@ -14,14 +14,14 @@ export default function Footer() {
           <i className="fab fa-github icon"></i>
         </a>
         <a
-          title="github"
+          title="linkedIn"
           rel="noreferrer"
           href="https://www.linkedin.com/in/developer-junaid/"
         >
           <i className="fab fa-linkedin-in icon"></i>
         </a>
         <a
-          title="github"
+          title="facebook"
           rel="noreferrer"
           href="https://www.facebook.com/profile.php?id=100041078220896"
         >
